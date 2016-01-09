@@ -1,0 +1,10 @@
+#cloud-config
+
+coreos:
+  units:
+    - name: docker.service
+      drop-ins: 
+        - name: 50-insecure-registry.conf
+          content: |
+            [Service]
+            Environment='DOCKER_OPTS=--insecure-registry=ci:5000 '

@@ -1,0 +1,23 @@
+[local]
+localhost ansible_python_interpreter=/usr/local/bin/python
+
+[load-balancers]
+38.84.67.176
+38.84.67.175
+
+[load-balancers:vars]
+ansible_ssh_private_key_file = ~/.ssh/tco-gold.pem
+ansible_ssh_user = cloud
+
+[ci]
+38.84.67.179
+
+[ci:vars]
+ansible_ssh_user = core
+ansible_ssh_private_key_file = ~/.ssh/tco-gold.pem
+ansible_python_interpreter=/home/core/bin/python
+
+[db]
+38.84.67.180
+
+
