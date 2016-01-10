@@ -4,7 +4,7 @@ FROM ubuntu:wily
 MAINTAINER Vallard Benincosa (vallard@benincosa.com)
 
 RUN apt-get update && apt-get upgrade -q -y
-RUN apt-get install -q -y git curl software-properties-common
+RUN apt-get install -q -y git curl software-properties-common vim
 RUN add-apt-repository ppa:ethereum/ethereum 
 RUN add-apt-repository ppa:ethereum/ethereum-dev 
 RUN apt-get update
@@ -14,7 +14,4 @@ ADD ethereum /home/ubuntu/ethereum
 EXPOSE 8545
 EXPOSE 30303
 
-CMD ["/home/ubuntu/ethereum"]
-
-
-
+#CMD ["/home/ubuntu/ethereum"]
