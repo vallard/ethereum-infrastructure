@@ -2,9 +2,12 @@ variable "image" { default = "CoreOS" }
 variable "count" { default = 4 }
 variable "key_name" { default = "ethkey" }
 variable "public_key_file" { default = "~/.ssh/id_rsa.pub" }
+/* the image that was built by packer */ 
+variable "image_name" { default = "ethereum" }
 variable "flavor_name" { default = "HS3-Large" }
 variable "network_id" { default = "551afb90-b9bc-416f-8526-6637da42aa06" }
 variable "security_groups" { default = "default" }
+variable "network_name" { default = "Toms-Private_Network" }
 
 
 /* Using all environment variables to make this work.  
@@ -27,11 +30,11 @@ resource "openstack_compute_keypair_v2" "keypair" {
 }
 
 resource "openstack_compute_instance_v2" "ethnode" {
-  name = "ethereum${ format("%02d", count.index+1) }"
+  name = "ethereum-${ format("%02d", count.index+1) }"
   key_pair = "${ var.key_name }"
-  image_name = "CoreOS"
+  image_name = "${ var.image_name }"
   flavor_name = "${ var.flavor_name }"
   security_groups = [ "${ var.security_groups}" ]
-  network =  {  name = "Toms-Private_Network" }
+  network =  {  name = "${ var.network_name }" }
   count = "${ var.count }"
 }
