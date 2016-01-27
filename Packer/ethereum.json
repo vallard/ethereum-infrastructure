@@ -1,0 +1,20 @@
+{
+  "builders" : [{
+    "name": "Cisco Cloud",
+    "type": "openstack",
+    "ssh_username": "core",
+    "image_name": "ethereum",
+    "use_floating_ip": "true",
+    "floating_ip_pool": "public-floating-601",
+    "source_image": "d7a5522c-12e2-4968-8655-ae6bad622a69",
+    "flavor": "Micro-Small",
+    "networks": [ "551afb90-b9bc-416f-8526-6637da42aa06" ],
+    "security_groups": [ "default" ],
+    "ssh_keypair_name" : "packerKey",
+    "ssh_private_key_file" : "packerKey"
+  }],
+  "provisioners": [{
+    "type": "shell",
+    "script": "ethereum-setup.sh" 
+  }]
+}

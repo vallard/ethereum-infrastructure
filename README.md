@@ -1,4 +1,9 @@
-# ethereum-infrastructure
+# ethereutart(8);  # this will say true and start creating the stuff.
+```
+The miner will generate a DAG.  In my setup it took 10 minutes:
+```
+README.md                                                                       
+-infrastructure
 Infrastructure for setting up private Ethereum cluster on OpenStack using Ansible and Geth. 
 
 Purpose is to run Ethereum in containers on a private network. 
@@ -7,6 +12,9 @@ Purpose is to run Ethereum in containers on a private network.
 
 Great document on starting a private chain:
 http://adeduke.com/2015/08/how-to-create-a-private-ethereum-chain/
+
+But this one might be a little more explicit:
+http://tech.lab.carl.pro/kb/ethereum/testnet_setup
 
 Instructions to get up and running and mine to do contracts: 
 https://github.com/ethereum/go-ethereum/wiki/Contracts-and-Transactions#testing-contracts-and-transactions

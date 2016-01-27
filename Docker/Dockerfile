@@ -5,6 +5,9 @@ MAINTAINER Vallard Benincosa (vallard@benincosa.com)
 
 RUN apt-get update && apt-get upgrade -q -y
 RUN apt-get install -q -y git curl software-properties-common vim
+# Got a proxy? 
+#ENV HTTPS_PROXY=http://proxy.esl.cisco.com:80
+#ENV HTTP_PROXY=http://proxy.esl.cisco.com:80
 RUN add-apt-repository ppa:ethereum/ethereum 
 RUN add-apt-repository ppa:ethereum/ethereum-dev 
 RUN apt-get update
