@@ -1,14 +1,11 @@
-# ethereutart(8);  # this will say true and start creating the stuff.
-```
-The miner will generate a DAG.  In my setup it took 10 minutes:
-```
-README.md                                                                       
--infrastructure
-Infrastructure for setting up private Ethereum cluster on OpenStack using Ansible and Geth. 
+# Private Ethereum setup 
 
 Purpose is to run Ethereum in containers on a private network. 
 
-## Documentation
+## Instructions
+More to come
+
+## Documentation References
 
 Great document on starting a private chain:
 http://adeduke.com/2015/08/how-to-create-a-private-ethereum-chain/
@@ -63,5 +60,3 @@ that has been mined.
 ```
 > web3.fromWei(eth.getBalance(primary), "ether");
 ```
-
-coinbase: 0xbdcfdcde36d7f9034fff09991dd21f96113fc274
