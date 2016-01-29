@@ -19,6 +19,9 @@ http://tech.lab.carl.pro/kb/ethereum/testnet_setup
 Instructions to get up and running and mine to do contracts: 
 https://github.com/ethereum/go-ethereum/wiki/Contracts-and-Transactions#testing-contracts-and-transactions
 
+Allocating balance at startup:
+https://gist.github.com/maran/8c58a65df3c3a4548ae6
+
 
 Run the docker image: 
 ```
@@ -61,6 +64,4 @@ that has been mined.
 > web3.fromWei(eth.getBalance(primary), "ether");
 ```
 
-
-
-
+coinbase: 0xbdcfdcde36d7f9034fff09991dd21f96113fc274

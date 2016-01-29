@@ -1,2 +1,3 @@
 #!/bin/bash
-geth --genesis /home/ubuntu/ethereum/private-genesis.json --datadir ~/veth/ --networkid 456321 --maxpeers 0 console | tee -a ~/ethereum.log
+
+geth --genesis /home/ubuntu/ethereum/private-genesis.json --datadir /home/ubuntu/ethereum/ethdata/ --networkid ${ETH_NETWORK_ID} --rpc --mine --minerthreads ${MINERTHREADS} console | tee -a ~/ethereum.log

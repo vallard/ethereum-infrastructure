@@ -12,10 +12,11 @@ RUN add-apt-repository ppa:ethereum/ethereum
 RUN add-apt-repository ppa:ethereum/ethereum-dev 
 RUN apt-get update
 RUN apt-get install -q -y geth
-RUN mkdir ~/veth 
 
 ADD ethereum /home/ubuntu/ethereum
+WORKDIR /home/ubuntu/ethereum
+VOLUME ["/home/ubuntu/ethereum/ethdata"]
 EXPOSE 8545
 EXPOSE 30303
 
-CMD ["/home/ubuntu/ethereum/start.sh"]
+CMD ["./start.sh"]
