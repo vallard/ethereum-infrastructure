@@ -5,8 +5,8 @@ date >/tmp/date-of-birth
 git clone https://github.com/vallard/ethereum-infrastructure.git
 cd ethereum-infrastructure/Docker
 sudo docker build -t vallard/ethereum:latest . 
-# hacks to try to make the image persist after imaging. 
+# hacks to make sure the docker image is preserved!
 echo "Restarting docker"
 sudo systemctl restart docker
-sleep 20
+sleep 40
 docker images
