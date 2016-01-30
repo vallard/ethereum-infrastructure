@@ -5,5 +5,6 @@ date >/tmp/date-of-birth
 git clone https://github.com/vallard/ethereum-infrastructure.git
 cd ethereum-infrastructure/Docker
 docker build -t vallard/ethereum:latest . 
-docker pull hello-world
+# hacks to try to make the image persist after imaging. 
+sudo systemctl restart docker
 docker images
