@@ -37,4 +37,5 @@ resource "openstack_compute_instance_v2" "ethnode" {
   security_groups = [ "${ var.security_groups}" ]
   network =  {  name = "${ var.network_name }" }
   count = "${ var.count }"
+  user_data = "${file('startmining.sh')}"
 }
