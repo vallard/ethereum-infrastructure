@@ -64,7 +64,7 @@ geth --genesis ./private-genesis.json --datadir ~/veth/  --networkid 696969 cons
 
 This will launch you onto the geth javascript console.  Let's set some stuff up so we can generate some 
 money!
-(Follow these instructions)[https://github.com/ethereum/go-ethereum/wiki/Contracts-and-Transactions#testing-contracts-and-transactions]
+[Follow these instructions](https://github.com/ethereum/go-ethereum/wiki/Contracts-and-Transactions#testing-contracts-and-transactions)
 ```
 > personal.newAccount();
 # Enter new password here twice!
